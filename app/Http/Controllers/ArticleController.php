@@ -38,7 +38,7 @@ class ArticleController extends Controller
         $article->fill($data);
         $article->save();
         return redirect()->route('articles.index')
-        ->with('success','VERY NICE');
+        ->with('success','Статья успешно создана');
     }
 
     public function edit($id)
@@ -57,7 +57,7 @@ class ArticleController extends Controller
 
     $article->fill($data);
     $article->save();
-    return redirect()
-        ->route('articles.index');
+    return redirect()->route('articles.index')
+        ->with('success','Статья успешно обновлена');
     }
 }
